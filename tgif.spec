@@ -16,7 +16,6 @@ Source4:	tgif-mini.png
 License: 	QPL
 Group: 		Graphics
 Url: 		http://bourbon.usc.edu/tgif/
-BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	imake
 BuildRequires:	X11-devel
 BuildRequires:	libxt-devel
