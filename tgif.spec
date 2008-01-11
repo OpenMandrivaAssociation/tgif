@@ -9,7 +9,6 @@ Name: 		%{name}
 Version: 	%{version}
 Release: 	%mkrel %{release}
 Source0: 	%{name}-%{license}-%{version}.tar.bz2
-Source1:	tgif_menuentry
 Source2:	tgif.png
 Source3:	tgif-large.png
 Source4:	tgif-mini.png
@@ -71,9 +70,6 @@ StartupNotify=true
 Categories=Graphics;VectorGraphics;X-MandrivaLinux-Office-Drawing;
 EOF
 
-# Old style menu:
-%__install -D -m 644 %{SOURCE1} %{buildroot}%{_menudir}/tgif
-
 
 %post
 %{update_menus}
@@ -95,7 +91,4 @@ EOF
 %{_miconsdir}/tgif.png
 %{_liconsdir}/tgif.png
 %{_datadir}/applications/mandriva-%{name}.desktop
-%{_menudir}/tgif
-
-
 
