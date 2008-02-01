@@ -1,6 +1,6 @@
 %define name 	tgif
 %define version 4.1.45 
-%define release 10
+%define release 11
 %define license QPL
 %define prefix  /usr/X11R6
 
@@ -61,13 +61,13 @@ xmkmf
 %__cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 [Desktop Entry]
 Name=Tgif
-Comment=%{longtitle}
+Comment=Xlib-based 2-D drawing tool
 Exec=%{prefix}/bin/%{name} %f
 Icon=%{name}
 Terminal=false
 Type=Application
 StartupNotify=true
-Categories=Graphics;VectorGraphics;X-MandrivaLinux-Office-Drawing;
+Categories=Graphics;VectorGraphics;
 EOF
 
 
