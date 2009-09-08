@@ -1,6 +1,6 @@
 %define name 	tgif
 %define version 4.1.45 
-%define release 11
+%define release 12
 %define license QPL
 %define prefix  /usr/X11R6
 
