@@ -1,6 +1,6 @@
 %define name 	tgif
-%define version 4.1.45 
-%define release 12
+%define version 4.2.2
+%define release 1
 %define license QPL
 %define prefix  /usr/X11R6
 
@@ -8,7 +8,7 @@ Summary: 	Xlib-based 2-D drawing tool
 Name: 		%{name}
 Version: 	%{version}
 Release: 	%mkrel %{release}
-Source0: 	%{name}-%{license}-%{version}.tar.bz2
+Source0: 	%{name}-%{license}-%{version}.tar.gz
 Source2:	tgif.png
 Source3:	tgif-large.png
 Source4:	tgif-mini.png
@@ -16,7 +16,6 @@ License: 	QPL
 Group: 		Graphics
 Url: 		http://bourbon.usc.edu/tgif/
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:	imake
 BuildRequires:	X11-devel
 BuildRequires:	libxt-devel
 
@@ -28,8 +27,8 @@ for Linux and most UNIX platforms.
 %setup -q -n %{name}-%{license}-%{version}
 
 %build
-xmkmf
-%__make -j 3
+%configure
+%make
 
 %install
 %__rm -rf %{buildroot}
@@ -45,11 +44,8 @@ xmkmf
 
 # Compress man page before installing:
 %__cp tgif.man tgif.1
-%__bzip2 tgif.1
-%__install -m 644 tgif.1.bz2 %{buildroot}%{prefix}/man/man1/
-
-# prtgif is deprecated:
-%__rm -f %{buildroot}%{prefix}/bin/prtgif
+%__lzma -z tgif.1
+%__install -m 644 tgif.1.lzma %{buildroot}%{prefix}/man/man1/
 
 # Icons:
 %__install -D -m 644 %{SOURCE2} %{buildroot}%{_iconsdir}/tgif.png
@@ -69,7 +65,6 @@ Type=Application
 StartupNotify=true
 Categories=Graphics;VectorGraphics;
 EOF
-
 
 %if %mdkversion < 200900
 %post
