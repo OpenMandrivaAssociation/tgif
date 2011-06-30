@@ -1,6 +1,6 @@
 %define name 	tgif
-%define version 4.2.3
-%define release 2
+%define version 4.2.5
+%define release 1
 %define license QPL
 %define prefix  /usr/X11R6
 
@@ -12,7 +12,6 @@ Source0: 	%{name}-%{license}-%{version}.tar.gz
 Source2:	tgif.png
 Source3:	tgif-large.png
 Source4:	tgif-mini.png
-Patch0:		tgif-QPL-4.2-patch3a.gz
 License: 	QPL
 Group: 		Graphics
 Url: 		http://bourbon.usc.edu/tgif/
@@ -26,7 +25,6 @@ for Linux and most UNIX platforms.
 
 %prep
 %setup -q -n %{name}-%{license}-%{version}
-%patch0 -p0
 
 %build
 %configure2_5x
