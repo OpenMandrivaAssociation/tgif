@@ -6,7 +6,7 @@
 Summary: 	Xlib-based 2-D drawing tool
 Name: 		tgif
 Version: 	4.2.5
-Release: 	2
+Release: 	3
 Source0: 	%{name}-%{license}-%{version}.tar.gz
 Source2:	tgif.png
 Source3:	tgif-large.png
