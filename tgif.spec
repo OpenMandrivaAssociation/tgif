@@ -13,7 +13,7 @@ Source3:	tgif-large.png
 Source4:	tgif-mini.png
 License: 	QPL
 Group: 		Graphics
-Url: 		http://bourbon.usc.edu/tgif/
+Url: 		https://bourbon.usc.edu/tgif/
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(xext)
 BuildRequires:	pkgconfig(xmu)
