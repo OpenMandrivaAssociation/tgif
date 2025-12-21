@@ -14,6 +14,11 @@ Source4:	tgif-mini.png
 License: 	QPL
 Group: 		Graphics
 Url: 		https://bourbon.usc.edu/tgif/
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(xext)
 BuildRequires:	pkgconfig(xmu)
